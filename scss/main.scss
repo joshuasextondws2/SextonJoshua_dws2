@@ -16,8 +16,9 @@ $font-size: 16px;
 
 //placeholder
 %center-element{
-	margin-right: auto;
-	margin-left: auto;
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
 }
 
 html{
@@ -49,13 +50,14 @@ search{
 
 li h3{
 	color: $secondary-color;
+	font-size: 10px;
 }
 
 h3{
 	background-color: $primary-color;
 	color: $neutral-color;
-	width: 14px;
-	margin-top: 7px;
+	width: 20rem;
+	margin-top: 50px;
 }
 
 h2{
@@ -63,13 +65,20 @@ h2{
 	width: 11rem;
 	margin-bottom: 0rem;
 	margin-top: 6px;
-	margin-left: 18rem;
+	margin-left: 20rem;
 	height: 1rem;
-	font-size: 16px;
+	font-size: 12px;
 }
 
 h1{
 	float: left;
+}
+
+nav{
+	float: right;
+	padding-left: 1rem;
+	font: 6px;
+	margin-top: 0;
 }
 
 nav li{
@@ -77,7 +86,7 @@ nav li{
 	padding: 0rem .5rem 0rem 0rem;
 	color: $copy-color;
 	font: 10px;
-	text-decoration: nones;
+	text-decoration: none;
 	
 	a{
 		display: block;
@@ -104,14 +113,13 @@ footer{
 }
 
 #searchField{
-	height: 15px;
-	width: 500px;
+	height: 30px;
+	width: 520px;
 	background-color: #EEEEEE;
 	margin-top: 0rem; 
-	margin-left: 18rem;
-	font-size: 12px;
+	margin-left: 20rem;
+	font-size: 20px;
 	margin-bottom: 20px;
-	padding-right: 25px;
 }
 
 #submitSearch{
@@ -149,7 +157,7 @@ results::after{
 
 #results > p{
 	font-size: 10px;
-	@include brs(1,0,0,0);
+	@include brs(1,0,1,0);
 	padding: .5em 1em;
 	background-color: $secondary-color;
 	width: 130px;
@@ -157,6 +165,7 @@ results::after{
 	margin: 28rem;
 	margin-bottom: 2rem;
 	margin-top: 2rem;
+	margin-left: 25rem;
 }
 	
 	
