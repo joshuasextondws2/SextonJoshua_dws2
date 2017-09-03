@@ -50,7 +50,7 @@ search{
 
 li h3{
 	color: $secondary-color;
-	font-size: 10px;
+	font-size: 14px;
 }
 
 h3{
@@ -70,8 +70,15 @@ h2{
 	font-size: 12px;
 }
 
-h1{
+h1 a{
 	float: left;
+	width: 60px; 
+    height: 60px;
+    background: url("../images/turntable.png");
+    background-repeat: no-repeat;
+    text-indent:-9999px;
+    margin-top: 3px;
+   
 }
 
 nav{
@@ -96,7 +103,7 @@ nav li{
 }
 }
 
-a:hover{
+nav a:hover{
 	color: $secondary-color;
 }
 
@@ -164,8 +171,8 @@ results::after{
 	color: $primary-color;
 	margin: 28rem;
 	margin-bottom: 2rem;
-	margin-top: 2rem;
-	margin-left: 25rem;
+	margin-top: 10rem;
+	margin-left: 24rem;
 }
 	
 	
