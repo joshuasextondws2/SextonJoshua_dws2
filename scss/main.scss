@@ -1,0 +1,48 @@
+//variables
+$primary-color: #111111;
+$secondary-color: #16A085;
+$font-stack: helvetica, Arial, san-serif;
+$copy-color: #CCCCCC;
+$neutral-color: white;
+$font-size: 16px;
+
+//mixin
+@mixin brs($topLeft, $topRight, $bottomLeft, $bottomRight){
+	border-top-left-radius: $topLeft;
+	border-top-right-radius: $topRight;
+	border-bottom-left-radius: $bottomLeft;
+	border-bottom-right-radius: $bottomRight;
+}
+
+//placeholder
+%center-element{
+	margin-right: auto;
+	margin-left: auto;
+}
+
+html{
+	background-color: $neutral-color;
+	font-family: $font-stack;
+	font-size: 16px;
+	line-height:1.5;
+	color: $copy-color;
+	height:100%;
+}
+	
+body{
+	background-image: url("../images/austin-neill-213462.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 30%;
+}
+
+header{
+	@extend %center-element;
+}
+
+search{
+	@extend %center-element;
+}
+
+#results{
+	@extend %center-element;
+}

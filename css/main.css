@@ -1,0 +1,16 @@
+header, search, #results {
+  margin-right: auto;
+  margin-left: auto; }
+
+html {
+  background-color: white;
+  font-family: helvetica, Arial, san-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #CCCCCC;
+  height: 100%; }
+
+body {
+  background-image: url("../images/austin-neill-213462.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 30%; }
