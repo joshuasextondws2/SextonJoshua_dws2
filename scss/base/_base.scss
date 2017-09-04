@@ -1,0 +1,123 @@
+//base
+
+html{
+	background-color: $neutral-color;
+	font-family: $font-stack;
+	font-size: 16px;
+	line-height:1.5;
+	color: $copy-color;
+	height:100%;
+}
+	
+body{
+	background-image: url("../images/austin-neill-213462.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 30%;
+}
+
+header{
+	@extend %center-element;
+}
+
+search{
+	@extend %center-element;
+}
+
+#results{
+	@extend %center-element;
+}
+
+li h3{
+	color: $secondary-color;
+	font-size: 14px;
+	width: 14rem;
+}
+
+h3{
+	background-color: $primary-color;
+	color: $neutral-color;
+	width: 14rem;
+	margin-top: 50px;
+}
+
+h2{
+	background-color: $primary-color;
+	width: 11rem;
+	margin-bottom: 0rem;
+	margin-top: 6px;
+	margin-left: 20rem;
+	height: 1rem;
+	font-size: 12px;
+}
+
+h1 a{
+	float: left;
+	width: 60px; 
+    height: 60px;
+    background: url("../images/turntable.png");
+    background-repeat: no-repeat;
+    text-indent:-9999px;
+    margin-top: 3px;
+   
+}
+
+#searchField{
+	height: 30px;
+	width: 520px;
+	background-color: #EEEEEE;
+	margin-top: 0rem; 
+	margin-left: 20rem;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+#submitSearch{
+	background-image: url("../images/search.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 15px 15px;
+	border: none;
+	margin-left: -25px;
+}
+
+#results {
+	li {
+		text-align: center;
+		width: calc(100%/3);
+		display: inline-block;
+		float: left;
+		font-size: 10px;
+		}
+ 	p {
+		text-align: center;
+		background-color: $primary-color;
+		font-size: 10px;
+		width: 14rem;
+		}
+}
+
+results::after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+#results ul:nth-of-type(3n+1),
+#results > p:last-child{
+	clear: left;
+}
+
+#results > p{
+	font-size: 10px;
+	@include brs(1,0,1,0);
+	padding: .5em 1em;
+	background-color: $secondary-color;
+	width: 130px;
+	color: $primary-color;
+	margin: 28rem;
+	margin-bottom: 2rem;
+	margin-top: 10rem;
+	margin-left: 24rem;
+}
+	

@@ -1,0 +1,34 @@
+//navigation
+
+nav{
+	float: right;
+	padding-left: 1rem;
+	font: 6px;
+	margin-top: 0;
+}
+
+nav li{
+	display: inline-block;
+	padding: 0rem .5rem 0rem 0rem;
+	color: $copy-color;
+	font: 10px;
+	text-decoration: none;
+	
+	a{
+		display: block;
+		color: $copy-color;
+		font-size: 10px;
+		text-decoration: none;
+}
+}
+
+nav a:hover{
+	color: $secondary-color;
+}
+
+header::after{
+
+	content: " ";
+	display: block;
+	clear: both;
+}
