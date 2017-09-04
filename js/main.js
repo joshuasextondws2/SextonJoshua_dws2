@@ -32,7 +32,7 @@ document.querySelector('#submitSearch').addEventListener('click', function(e){
 
 //build a query string with a template literal
 	var api =
-'https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist='+query+'&api_key=70858262ab8dd5ec29868a03c78bc3cf&format=json';
+`https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist='+query+'&api_key=70858262ab8dd5ec29868a03c78bc3cf&format=json`;
 
 //open the request passing in a type
 request.open('GET', api, true);
