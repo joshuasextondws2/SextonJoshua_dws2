@@ -7,6 +7,12 @@ if (element){
 	
 	}
 }
+
+
+
+
+
+
 //cache the required nodes
 const searchField = document.querySelector('#searchField');
 document.querySelector('#submitSearch').addEventListener('click', function(e){
@@ -33,9 +39,15 @@ request.onload = function(){
 	if(request.status >= 200 && request.status <400){
 		//parse our data from json
 		var data = JSON.parse(request.responseText);
-		//do something with the data
 		
+		//save the data
+		const stringData = JSON.stringify(data)
+		localStorage.set('userData', stringData)
+		
+		//do something with the data
 		var element = document.querySelectorAll('#results li');
+		
+		
         //loop over the results
         if(element){
         	var i;
