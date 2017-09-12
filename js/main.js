@@ -1,5 +1,27 @@
+function loadData(){
+	if(localStorage.getItem('userData')){
+		var data = JSON.parse(localStorage.getItem('userData'));
+//		 var newImage = "<img></img>";
+//        var list = document.querySelectorAll('#results li');
+ //       var i;
+ //       for (i=0; i < list.length; i++){
+  //      list[i].innerHTML += newImage;
+       // }
+       
+		 var element = document.querySelector('#results h3');
+          element.innerHTML= "Results for  "+data.topalbums.album[0].artist.name;
+		var element = document.querySelectorAll('#results li');
+		 //loop over the results
+       
+        var i;
+        	for (i=0; i < element.length; i++){
+		   	 	element[i].querySelectorAll('h3')[0].innerHTML= data.topalbums.album[i].name;
+				element[i].querySelectorAll('p')[0].innerHTML= data.topalbums.album[i].artist.name;
+           }
+		
+	}else{
 var element = document.querySelectorAll('#results li');
-if (element){
+
     var i;
     for (i = 0; i < element.length; i++) {
 	element[i].querySelectorAll('h3')[0].innerHTML = "";
@@ -7,6 +29,9 @@ if (element){
 	
 	}
 }
+
+}
+window.addEventListener('load', loadData, false);
 
 
 
@@ -42,7 +67,7 @@ request.onload = function(){
 		
 		//save the data
 		const stringData = JSON.stringify(data)
-		localStorage.set('userData', stringData)
+		localStorage.setItem('userData', stringData)
 		
 		//do something with the data
 		var element = document.querySelectorAll('#results li');
@@ -70,5 +95,5 @@ request.onerror = function(){
 
 //fire off the request
 request.send();
-
 })
+

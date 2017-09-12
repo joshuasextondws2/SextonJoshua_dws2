@@ -1,14 +1,587 @@
-//utilities
-@import 'utils/variables';
-@import 'utils/mixins';
-@import 'utils/placeholder';
+//variables
+$primary-color: #222222;
+$secondary-color: #16A085;
+$font-stack: helvetica, Arial, san-serif;
+$copy-color: #CCCCCC;
+$neutral-color: white;
+$font-size: 16px;
 
-//base styles
-@import 'base/base';
+//mixin
+@mixin brs($topLeft, $topRight, $bottomLeft, $bottomRight){
+	border-top-left-radius: $topLeft;
+	border-top-right-radius: $topRight;
+	border-bottom-left-radius: $bottomLeft;
+	border-bottom-right-radius: $bottomRight;
+}
 
-//layout navigation and footer
-@import 'layout/navigation';
-@import 'layout/footer';
+@mixin mq($size){
+	@if $size == small{
+		@media (min-width: 300px){ @content; }
+}
+@else if $size == medium {
+	@media (min-width: 400px) { @content; }
+}
+@else if $size == large{
+	@media (min-width: 700px) { @content; }
+}
+}
+
+//placeholder
+%center-element{
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+//base
+
+html{
+	@include mq(small){
+	background-color: $neutral-color;
+	font-family: $font-stack;
+	font-size: 12px;
+	line-height:1.5;
+	color: $copy-color;
+	height:100%;
+	}
+	@include mq(medium){
+	background-color: $neutral-color;
+	font-family: $font-stack;
+	font-size: 16px;
+	line-height:1.5;
+	color: $copy-color;
+	height:100%;
+	}
+	@include mq(large){
+	background-color: $neutral-color;
+	font-family: $font-stack;
+	font-size: 16px;
+	line-height:1.5;
+	color: $copy-color;
+	height:100%;
+	}
+}
+	
+body{
+	@include mq(small){
+	background-image: url("../images/austin-neill-213462.jpg");
+	background-repeat: no-repeat;
+	background-size: auto 22%;
+	}
+	@include mq(medium){
+	background-image: url("../images/austin-neill-213462.jpg");
+	background-repeat: no-repeat;
+	background-size: auto 20%;
+	}
+	@include mq(large){
+	background-image: url("../images/austin-neill-213462.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 28%;
+	}
+}
+
+header{
+	@include mq(small){
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+	@include mq(medium){
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+	
+	@include mq(large){
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+}
+
+search{
+	@include mq(small){
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+	@include mq(medium){
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+	@include mq(large){
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+}
+
+#results{
+	@include mq(small){
+	width: auto;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+	@include mq(medium){
+	width: auto;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+	@include mq(large){
+	width: auto;
+	max-width: 1100px;
+	margin: 0 auto;
+	}
+}
+
+li h3{
+	@include mq(small){
+	color: $secondary-color;
+	font-size: 12px;
+	width: auto;
+	
+	}
+	@include mq(medium){
+	color: $secondary-color;
+	font-size: 24px;
+	width: auto;
+	}
+	@include mq(large){
+	width: 100%;
+	color: $secondary-color;
+	font-size: 16px;
+	text-align: center;
+	padding-left: 3px
+	}
+}
+
+h3{
+	@include mq(small){
+	background-color: $primary-color;
+	color: $neutral-color;
+	width: 100%;
+	margin-top: 15px;
+	font-size: 18px;
+	text-align: center;
+	}
+	@include mq(medium){
+	background-color: $primary-color;
+	color: $neutral-color;
+	width: 100%;
+	margin-top: 18px;
+	font-size: 24px;
+	text-align: center;
+	}
+	@include mq(large){
+	background-color: $primary-color;
+	color: $neutral-color;
+	width: 50%;
+	margin-top: 18px;
+	font-size: 24px;
+	text-align: center;
+	}
+}
+
+h2{
+	@include mq(small){
+	background-color: $primary-color;
+	width: 20rem;
+	margin-bottom: 0rem;
+	margin-top: 70px;
+	padding-left: 3rem;
+	margin-left: 2rem;
+	height: 2rem;
+	font-size: 13px;
+	}
+	@include mq(medium){
+	background-color: $primary-color;
+	width: 20rem;
+	margin-bottom: 0rem;
+	margin-top: 70px;
+	margin-left: 1rem;
+	padding-left: 3rem;
+	height: 2rem;
+	font-size: 20px;
+	}
+	@include mq(large){
+	background-color: $primary-color;
+	width: 20rem;
+	margin-bottom: 0rem;
+	margin-top: 70px;
+	margin-left: 6rem;
+	padding-left: 3rem;
+	height: 2rem;
+	font-size: 20px;
+	}
+}
+
+h1 a{
+	@include mq(small){
+	float: left;
+	width: 60px; 
+    height: 60px;
+    background: url("../images/turntable.png");
+    background-repeat: no-repeat;
+    text-indent:-9999px;
+    margin-top: 3px;
+    }
+    @include mq(medium){
+    float: left;
+	width: 60px; 
+    height: 60px;
+    background: url("../images/turntable.png");
+    background-repeat: no-repeat;
+    text-indent:-9999px;
+    margin-top: 3px;
+    }
+    @include mq(large){
+    float: left;
+	width: 60px; 
+    height: 60px;
+    background: url("../images/turntable.png");
+    background-repeat: no-repeat;
+    text-indent:-9999px;
+    margin-top: 3px;
+    }
+   
+}
+//navigation
+
+nav{
+	@include mq(small){
+	float: right;
+	padding-left: 1rem;
+	font: 6px;
+	margin-top: 0;
+	}
+	@include mq(medium){
+	float: right;
+	padding-left: 1rem;
+	font: 6px;
+	margin-top: 0;
+	}
+	@include mq(large){
+	float: right;
+	padding-left: 1rem;
+	font: 6px;
+	margin-top: 0;
+	}
+}
+
+nav li{
+	@include mq(small){
+	display: inline-block;
+	padding: 0rem .5rem 0rem 0rem;
+	color: $copy-color;
+	font: 10px;
+	text-decoration: none;
+	
+	a{
+		display: block;
+		color: $copy-color;
+		font-size: 10px;
+		text-decoration: none;
+		}
+		}
+		@include mq(medium){
+		display: inline-block;
+	padding: 0rem .5rem 0rem 0rem;
+	color: $copy-color;
+	font: 10px;
+	text-decoration: none;
+	
+	a{
+		display: block;
+		color: $copy-color;
+		font-size: 10px;
+		text-decoration: none;
+		}
+		}
+		@include mq(large){
+		display: inline-block;
+		padding: 0rem .5rem 0rem 0rem;
+		color: $copy-color;
+		font: 10px;
+		text-decoration: none;
+	
+	a{
+		display: block;
+		color: $copy-color;
+		font-size: 10px;
+		text-decoration: none;
+		}
+}
+}
+
+nav a:hover{
+	@include mq(small){
+	color: $secondary-color;
+	}
+	@include mq(medium){
+		color: $secondary-color;
+	}
+	@include mq(large){
+		color: $secondary-color;
+
+	}
+}
+
+header::after{
+	@include mq(small){
+	content: " ";
+	display: block;
+	clear: both;
+	}
+	@include mq(medium){
+	content: " ";
+	display: block;
+	clear: both;
+	}
+	@include mq(large){
+	content: " ";
+	display: block;
+	clear: both;
+	}
+}
+
+//footer
+footer{
+	text-align: center;
+	background-color: $primary-color;
+}
+
+#searchField{
+	@include mq(small){
+	height: 40px;
+	width: 20rem;
+	background-color: #EEEEEE;
+	margin-top: 0rem; 
+	margin-left: 2rem;
+	font-size: 20px;
+	margin-bottom: 20px;
+	}
+	@include mq(medium){
+	height: 40px;
+	width: 20rem;
+	background-color: #EEEEEE;
+	margin-top: 0rem; 
+	margin-left: 2rem;
+	font-size: 20px;
+	margin-bottom: 20px;
+	}
+	@include mq(large){
+	height: 40px;
+	width: 30rem;
+	background-color: #EEEEEE;
+	margin-top: 0rem; 
+	margin-left: 6rem;
+	font-size: 20px;
+	margin-bottom: 20px;
+	}
+}
+
+#submitSearch{
+	@include mq(small){
+	background-image: url("../images/search.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 15px 15px;
+	border: none;
+	margin-left: -25px;
+	}
+	@include mq(medium){
+	background-image: url("../images/search.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 15px 15px;
+	border: none;
+	margin-left: -25px;
+	}
+	@include mq(large){
+	background-image: url("../images/search.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 15px 15px;
+	border: none;
+	margin-left: -25px;
+	}
+}
+#results ul {
+ @include mq(small){
+	width: auto;
+	padding-right: 0rem;
+	padding-left: 0rem;
+	}
+	@include mq(medium){
+	width: auto;
+	padding-right: 0rem;
+	padding-left: 0rem;
+	}
+	@include mq(large){
+	display: flex;
+	flex-wrap: wrap;
+	}
+}
+
+#results {
+	@include mq(small){
+	li {
+	    background-color: $primary-color;
+	    width: auto;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: flex-start;
+		text-align: center;
+		font-size: 10px;
+		margin-bottom: 1rem;
+		}
+ 	p {
+		text-align: center;
+		background-color: $primary-color;
+		font-size: 12px;
+		width: auto;
+		margin-top: 0rem;
+		}
+		}
+		@include mq(medium){
+		
+	li {
+		background-color: $primary-color;
+	    width: auto;
+		display: flex;
+	    justify-content: flex-start;
+		text-align: center;
+		font-size: 10px;
+		margin-bottom: 1rem;
+		}
+ 	 p{
+		text-align: center;
+		background-color: $primary-color;
+		font-size: 15px;
+		width: auto;
+		margin-top: 0rem;
+		}
+		}
+		@include mq(large){
+		
+	li {
+		width: 30%;
+		height: 100px;
+		display: flex;
+		margin-right: 1rem;
+		justify-content: flex-start;
+		flex-direction: row;
+		flex-wrap: wrap;
+        //background-color: $primary-color;
+	    text-align: center;
+		font-size: 10px;
+		margin-bottom: 1rem;
+		}
+ 	 p{
+		text-align: center;
+		//background-color: $primary-color;
+		font-size: 16px;
+		width: 100%;
+		
+		}
+		}
+	
+}
+
+
+results::after{
+	@include mq(small){
+	content: " ";
+	display: block;
+	clear: both;
+	}
+	@include mq(medium){
+	content: " ";
+	display: block;
+	clear: both;
+	}
+	@include mq(large){
+	content: " ";
+	display: block;
+	clear: both;
+	}
+}
+
+
+#results ul:nth-of-type(3n+1),
+#results > p:last-child{
+	@include mq(small){
+	clear: left;
+	}
+	@include mq(medium){
+	clear: left;
+	}
+	@include mq(large){
+	//clear: left;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	}
+}
+
+#results > p{
+	@include mq(small){
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 16px;
+	padding-right: 7rem;
+	text-align: center;
+	@include brs(1,1,1,1);
+    
+	background-color: $secondary-color;
+	width: auto;
+	color: $primary-color;
+	//margin: 28rem;
+	//margin-bottom: 2rem;
+	//margin-top: 10rem;
+	//margin-left: 24rem;
+	}
+	@include mq(medium){
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: 16px;
+	padding-right: 7rem;
+	text-align: center;
+	@include brs(1,1,1,1);
+    
+	background-color: $secondary-color;
+	width: auto;
+	color: $primary-color;
+	//margin: 28rem;
+	//margin-bottom: 2rem;
+	//margin-top: 10rem;
+	//margin-left: 24rem;
+	}
+	@include mq(large){
+	width: 100%;
+	margin-left: 20rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 12px;
+	@include brs(1,0,1,0);
+	padding: .5em 1em;
+	background-color: $secondary-color;
+	width: 6rem;
+	height: 20px;
+	color: $primary-color;
+	//margin: 28rem;
+	//margin-bottom: 2rem;
+	//margin-top: 10rem;
+	//margin-left: 24rem;
+	}
+}
 	
 	
 	
