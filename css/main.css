@@ -25,6 +25,15 @@
     color: #CCCCCC;
     height: 100%; } }
 
+@media (min-width: 1000px) {
+  html {
+    background-color: white;
+    font-family: helvetica, Arial, san-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #CCCCCC;
+    height: 100%; } }
+
 @media (min-width: 300px) {
   body {
     background-image: url("../images/austin-neill-213462.jpg");
@@ -43,6 +52,13 @@
     background-repeat: no-repeat;
     background-size: 100% 28%; } }
 
+@media (min-width: 1000px) {
+  body {
+    background-image: url("../images/austin-neill-213462.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    height: auto; } }
+
 @media (min-width: 300px) {
   header {
     width: 80%;
@@ -61,6 +77,11 @@
     max-width: 1100px;
     margin: 0 auto; } }
 
+@media (min-width: 1000px) {
+  header {
+    width: 80%;
+    margin: 0 auto; } }
+
 @media (min-width: 300px) {
   search {
     width: 80%;
@@ -74,6 +95,12 @@
     margin: 0 auto; } }
 
 @media (min-width: 700px) {
+  search {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto; } }
+
+@media (min-width: 1000px) {
   search {
     width: 80%;
     max-width: 1100px;
@@ -92,6 +119,12 @@
     margin: 0 auto; } }
 
 @media (min-width: 700px) {
+  #results {
+    width: auto;
+    max-width: 1100px;
+    margin: 0 auto; } }
+
+@media (min-width: 1000px) {
   #results {
     width: auto;
     max-width: 1100px;
@@ -113,9 +146,15 @@
   li h3 {
     width: 100%;
     color: #16A085;
+    font-size: 12px;
+    text-align: center; } }
+
+@media (min-width: 1000px) {
+  li h3 {
+    width: 100%;
+    color: #16A085;
     font-size: 16px;
-    text-align: center;
-    padding-left: 3px; } }
+    text-align: center; } }
 
 @media (min-width: 300px) {
   h3 {
@@ -132,7 +171,7 @@
     color: white;
     width: 100%;
     margin-top: 18px;
-    font-size: 24px;
+    font-size: 16px;
     text-align: center; } }
 
 @media (min-width: 700px) {
@@ -143,6 +182,14 @@
     margin-top: 18px;
     font-size: 24px;
     text-align: center; } }
+
+@media (min-width: 1000px) {
+  h3 {
+    background-color: #222222;
+    color: white;
+    width: 20rem;
+    margin-top: 18px;
+    font-size: 24px; } }
 
 @media (min-width: 300px) {
   h2 {
@@ -177,6 +224,17 @@
     height: 2rem;
     font-size: 20px; } }
 
+@media (min-width: 1000px) {
+  h2 {
+    background-color: #222222;
+    width: 20rem;
+    margin-bottom: 0rem;
+    margin-top: 70px;
+    margin-left: 10rem;
+    padding-left: 3rem;
+    height: 2rem;
+    font-size: 20px; } }
+
 @media (min-width: 300px) {
   h1 a {
     float: left;
@@ -207,26 +265,43 @@
     text-indent: -9999px;
     margin-top: 3px; } }
 
+@media (min-width: 1000px) {
+  h1 a {
+    float: left;
+    width: 60px;
+    height: 60px;
+    background: url("../images/turntable.png");
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    margin-top: 3px; } }
+
 @media (min-width: 300px) {
-  nav {
-    float: right;
-    padding-left: 1rem;
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
     font: 6px;
     margin-top: 0; } }
 
 @media (min-width: 400px) {
-  nav {
-    float: right;
-    padding-left: 1rem;
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
     font: 6px;
     margin-top: 0; } }
 
 @media (min-width: 700px) {
-  nav {
-    float: right;
-    padding-left: 1rem;
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
     font: 6px;
     margin-top: 0; } }
+
+@media (min-width: 1000px) {
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    font: 6px;
+    margin-top: 2px; } }
 
 @media (min-width: 300px) {
   nav li {
@@ -263,6 +338,17 @@
     text-decoration: none; }
     nav li a {
       display: block;
+      color: #CCCCCC;
+      font-size: 10px;
+      text-decoration: none; } }
+
+@media (min-width: 1000px) {
+  nav li {
+    color: #CCCCCC;
+    font: 10px;
+    text-decoration: none; }
+    nav li a {
+      display: flex;
       color: #CCCCCC;
       font-size: 10px;
       text-decoration: none; } }
@@ -276,6 +362,10 @@
     color: #16A085; } }
 
 @media (min-width: 700px) {
+  nav a:hover {
+    color: #16A085; } }
+
+@media (min-width: 1000px) {
   nav a:hover {
     color: #16A085; } }
 
@@ -292,6 +382,12 @@
     clear: both; } }
 
 @media (min-width: 700px) {
+  header::after {
+    content: " ";
+    display: block;
+    clear: both; } }
+
+@media (min-width: 1000px) {
   header::after {
     content: " ";
     display: block;
@@ -331,6 +427,16 @@ footer {
     font-size: 20px;
     margin-bottom: 20px; } }
 
+@media (min-width: 1000px) {
+  #searchField {
+    height: 40px;
+    width: 40rem;
+    background-color: #EEEEEE;
+    margin-top: 0rem;
+    margin-left: 10rem;
+    font-size: 25px;
+    margin-bottom: 20px; } }
+
 @media (min-width: 300px) {
   #submitSearch {
     background-image: url("../images/search.png");
@@ -361,19 +467,36 @@ footer {
     border: none;
     margin-left: -25px; } }
 
+@media (min-width: 1000px) {
+  #submitSearch {
+    background-image: url("../images/search.png");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: 15px 15px;
+    border: none;
+    margin-left: -25px; } }
+
 @media (min-width: 300px) {
   #results ul {
     width: auto;
+    display: flex;
+    flex-direction: column;
     padding-right: 0rem;
     padding-left: 0rem; } }
 
 @media (min-width: 400px) {
   #results ul {
-    width: auto;
-    padding-right: 0rem;
-    padding-left: 0rem; } }
+    display: flex;
+    flex-wrap: wrap; } }
 
 @media (min-width: 700px) {
+  #results ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; } }
+
+@media (min-width: 1000px) {
   #results ul {
     display: flex;
     flex-wrap: wrap; } }
@@ -401,8 +524,9 @@ footer {
     width: auto;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
     text-align: center;
-    font-size: 10px;
+    font-size: 8px;
     margin-bottom: 1rem; }
   #results p {
     text-align: center;
@@ -414,7 +538,24 @@ footer {
 @media (min-width: 700px) {
   #results li {
     width: 30%;
-    height: 100px;
+    height: 120px;
+    display: flex;
+    margin-right: 1rem;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 1rem; }
+  #results p {
+    text-align: center;
+    font-size: 16px;
+    width: 100%; } }
+
+@media (min-width: 1000px) {
+  #results li {
+    width: 30%;
+    height: 120px;
     display: flex;
     margin-right: 1rem;
     justify-content: flex-start;
@@ -446,6 +587,12 @@ footer {
     display: block;
     clear: both; } }
 
+@media (min-width: 1000px) {
+  results::after {
+    content: " ";
+    display: block;
+    clear: both; } }
+
 @media (min-width: 300px) {
   #results ul:nth-of-type(3n+1),
   #results > p:last-child {
@@ -457,6 +604,13 @@ footer {
     clear: left; } }
 
 @media (min-width: 700px) {
+  #results ul:nth-of-type(3n+1),
+  #results > p:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; } }
+
+@media (min-width: 1000px) {
   #results ul:nth-of-type(3n+1),
   #results > p:last-child {
     display: flex;
@@ -511,4 +665,22 @@ footer {
     background-color: #16A085;
     width: 6rem;
     height: 20px;
+    color: #222222; } }
+
+@media (min-width: 1000px) {
+  #results > p {
+    width: 100%;
+    margin-left: 30rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    border-top-left-radius: 1;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1;
+    border-bottom-right-radius: 0;
+    padding: .5em 1em;
+    background-color: #16A085;
+    width: 120px;
+    height: 17px;
     color: #222222; } }

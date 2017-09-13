@@ -7,7 +7,8 @@ function loadData(){
  //       for (i=0; i < list.length; i++){
   //      list[i].innerHTML += newImage;
        // }
-       
+        var element= document.querySelector('#search h2');
+        element.innerHTML = "Search for your favorite artist";
 		 var element = document.querySelector('#results h3');
           element.innerHTML= "Results for  "+data.topalbums.album[0].artist.name;
 		var element = document.querySelectorAll('#results li');
@@ -20,7 +21,7 @@ function loadData(){
            }
 		
 	}else{
-var element = document.querySelectorAll('#results li');
+	var element = document.querySelectorAll('#results li');
 
     var i;
     for (i = 0; i < element.length; i++) {
