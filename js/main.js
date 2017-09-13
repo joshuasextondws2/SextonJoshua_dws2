@@ -16,6 +16,12 @@ function loadData(){
            }
 		
 	}else{
+	
+		var element= document.querySelector('#search h2');
+        element.innerHTML = "Search for your favorite artist";
+        //populate the h3
+		var element = document.querySelector('#results h3');
+        element.innerHTML= "Results for  "
 		var element = document.querySelectorAll('#results li');
 
     	var i;
