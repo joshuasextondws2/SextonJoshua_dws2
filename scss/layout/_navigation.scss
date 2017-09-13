@@ -1,34 +1,126 @@
 //navigation
 
-nav{
-	float: right;
-	padding-left: 1rem;
-	font: 6px;
-	margin-top: 0;
+
+nav ul{
+	@include mq(small){
+		display: flex;
+		justify-content:flex-end;
+		font: 6px;
+		margin-top: 0;
+	}
+	@include mq(medium){
+		display: flex;
+		justify-content:flex-end;
+		font: 6px;
+		margin-top: 0;
+	}
+	@include mq(large){
+		display: flex;
+		justify-content:flex-end;
+		font: 6px;
+		margin-top: 0;
+	}
+	@media(min-width: 1000px){
+	 	display: flex;
+	 	justify-content:flex-end;
+	 	font: 6px;
+	 	margin-top: 2px;
+	 }
 }
 
 nav li{
-	display: inline-block;
-	padding: 0rem .5rem 0rem 0rem;
-	color: $copy-color;
-	font: 10px;
-	text-decoration: none;
+	@include mq(small){
+		display: inline-block;
+		padding: 0rem .5rem 0rem 0rem;
+		color: $copy-color;
+		font: 10px;
+		text-decoration: none;
 	
 	a{
 		display: block;
 		color: $copy-color;
 		font-size: 10px;
 		text-decoration: none;
+		}
+		}
+	@include mq(medium){
+			display: inline-block;
+	 		padding: 0rem .5rem 0rem 0rem;
+			color: $copy-color;
+			font: 10px;
+			text-decoration: none;
+	
+	a{
+		display: block;
+		color: $copy-color;
+		font-size: 10px;
+		text-decoration: none;
+		}
+		}
+	@include mq(large){
+		display: inline-block;
+		padding: 0rem .5rem 0rem 0rem;
+		color: $copy-color;
+		font: 10px;
+		text-decoration: none;
+	
+	a{
+		display: block;
+		color: $copy-color;
+		font-size: 10px;
+		text-decoration: none;
+		}
+}
+	@media(min-width: 1000px){
+		color: $copy-color;
+		font: 10px;
+		text-decoration: none;
+	
+	a{
+		display: flex;
+		color: $copy-color;
+		font-size: 10px;
+		text-decoration: none;
+		}
 }
 }
 
 nav a:hover{
-	color: $secondary-color;
+	@include mq(small){
+		color: $secondary-color;
+	}
+	@include mq(medium){
+		color: $secondary-color;
+	}
+	@include mq(large){
+		color: $secondary-color;
+
+	}
+	@media(min-width: 1000px){
+		color: $secondary-color;
+
+	}
 }
 
 header::after{
-
-	content: " ";
-	display: block;
-	clear: both;
+	@include mq(small){
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	@include mq(medium){
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	@include mq(large){
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	@media(min-width: 1000px){
+		content: " ";
+		display: block;
+		clear: both;
+	}
 }

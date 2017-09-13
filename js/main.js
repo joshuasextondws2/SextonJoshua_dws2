@@ -1,32 +1,27 @@
 function loadData(){
 	if(localStorage.getItem('userData')){
 		var data = JSON.parse(localStorage.getItem('userData'));
-//		 var newImage = "<img></img>";
-//        var list = document.querySelectorAll('#results li');
- //       var i;
- //       for (i=0; i < list.length; i++){
-  //      list[i].innerHTML += newImage;
-       // }
+        //populate the h2
         var element= document.querySelector('#search h2');
         element.innerHTML = "Search for your favorite artist";
-		 var element = document.querySelector('#results h3');
-          element.innerHTML= "Results for  "+data.topalbums.album[0].artist.name;
+        //populate the h3
+		var element = document.querySelector('#results h3');
+        element.innerHTML= "Results for  "+data.topalbums.album[0].artist.name;
 		var element = document.querySelectorAll('#results li');
 		 //loop over the results
-       
-        var i;
+       	var i;
         	for (i=0; i < element.length; i++){
 		   	 	element[i].querySelectorAll('h3')[0].innerHTML= data.topalbums.album[i].name;
 				element[i].querySelectorAll('p')[0].innerHTML= data.topalbums.album[i].artist.name;
            }
 		
 	}else{
-	var element = document.querySelectorAll('#results li');
+		var element = document.querySelectorAll('#results li');
 
-    var i;
-    for (i = 0; i < element.length; i++) {
-	element[i].querySelectorAll('h3')[0].innerHTML = "";
-	element[i].querySelectorAll('p')[0].innerHTML = "";
+    	var i;
+    	for (i = 0; i < element.length; i++) {
+		element[i].querySelectorAll('h3')[0].innerHTML = "";
+		element[i].querySelectorAll('p')[0].innerHTML = "";
 	
 	}
 }

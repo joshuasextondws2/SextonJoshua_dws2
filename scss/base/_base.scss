@@ -1,77 +1,317 @@
 //base
 
 html{
-	background-color: $neutral-color;
-	font-family: $font-stack;
-	font-size: 16px;
-	line-height:1.5;
-	color: $copy-color;
-	height:100%;
-}
+	@include mq(small){
+		background-color: $neutral-color;
+		font-family: $font-stack;
+		font-size: 12px;
+		line-height:1.5;
+		color: $copy-color;
+		height:100%;
+	}
+	@include mq(medium){
+		background-color: $neutral-color;
+		font-family: $font-stack;
+		font-size: 16px;
+		line-height:1.5;
+		color: $copy-color;
+		height:100%;
+	}
+	@include mq(large){
+		background-color: $neutral-color;
+		font-family: $font-stack;
+		font-size: 16px;
+		line-height:1.5;
+		color: $copy-color;
+		height:100%;
+	}
+	@media(min-width: 1000px){
+		background-color: $neutral-color;
+		font-family: $font-stack;
+		font-size: 16px;
+		line-height:1.5;
+		color: $copy-color;
+		height:100%;
+	}
+	
+	}
+
 	
 body{
-	background-image: url("../images/austin-neill-213462.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% 30%;
+	@include mq(small){
+		background-image: url("../images/austin-neill-213462.jpg");
+		background-repeat: no-repeat;
+		background-size: auto 22%;
+	}
+	@include mq(medium){
+		background-image: url("../images/austin-neill-213462.jpg");
+		background-repeat: no-repeat;
+		background-size: auto 20%;
+	}
+	@include mq(large){
+		background-image: url("../images/austin-neill-213462.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 28%;
+	}
+	@media(min-width: 1000px){
+		background-image: url("../images/austin-neill-213462.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% 30%;
+		height: auto;
+	}
 }
 
 header{
-	@extend %center-element;
+	@include mq(small){
+		width: 80%;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	@include mq(medium){
+		width: 80%;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	
+	@include mq(large){
+		width: 80%;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	@media(min-width: 1000px){
+		width: 80%;
+		margin: 0 auto;
+	}
 }
 
 search{
-	@extend %center-element;
+	@include mq(small){
+		width: 80%;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	@include mq(medium){
+		width: 80%;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	@include mq(large){
+		width: 80%;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	@media(min-width: 1000px){
+		width: 80%;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
 }
 
 #results{
-	@extend %center-element;
+	@include mq(small){
+		width: auto;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	@include mq(medium){
+		width: auto;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	@include mq(large){
+		width: auto;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+	@media(min-width: 1000px){
+		width: auto;
+		max-width: 1100px;
+		margin: 0 auto;
+	}
 }
 
 li h3{
-	color: $secondary-color;
-	font-size: 14px;
-	width: 14rem;
+	@include mq(small){
+		color: $secondary-color;
+		font-size: 12px;
+		width: auto;
+	}
+	@include mq(medium){
+		color: $secondary-color;
+		font-size: 24px;
+		width: auto;
+	}
+	@include mq(large){
+		width: 100%;
+		color: $secondary-color;
+		font-size: 12px;
+		text-align: center;
+	}
+	@media(min-width: 1000px){
+		width: 100%;
+		color: $secondary-color;
+		font-size: 16px;
+		text-align: center;
+	}
 }
 
 h3{
-	background-color: $primary-color;
-	color: $neutral-color;
-	width: 14rem;
-	margin-top: 50px;
+	@include mq(small){
+		background-color: $primary-color;
+		color: $neutral-color;
+		width: 100%;
+		margin-top: 15px;
+		font-size: 18px;
+		text-align: center;
+	}
+	@include mq(medium){
+		background-color: $primary-color;
+		color: $neutral-color;
+		width: 100%;
+		margin-top: 18px;
+		font-size: 16px;
+		text-align: center;
+	}
+	@include mq(large){
+		background-color: $primary-color;
+		color: $neutral-color;
+		width: 50%;
+		margin-top: 18px;
+		font-size: 24px;
+		text-align: center;
+	}
+	@media(min-width: 1000px){
+		background-color: $primary-color;
+		color: $neutral-color;
+		width: 20rem;
+		margin-top: 18px;
+		font-size: 24px;
+		}
 }
 
 h2{
-	background-color: $primary-color;
-	width: 11rem;
-	margin-bottom: 0rem;
-	margin-top: 6px;
-	margin-left: 20rem;
-	height: 1rem;
-	font-size: 12px;
+	@include mq(small){
+		background-color: $primary-color;
+		width: 20rem;
+		margin-bottom: 0rem;
+		margin-top: 70px;
+		padding-left: 3rem;
+		margin-left: 2rem;
+		height: 2rem;
+		font-size: 13px;
+	}
+	@include mq(medium){
+		background-color: $primary-color;
+		width: 20rem;
+		margin-bottom: 0rem;
+		margin-top: 70px;
+		margin-left: 1rem;
+		padding-left: 3rem;
+		height: 2rem;
+		font-size: 20px;
+	}
+	@include mq(large){
+		background-color: $primary-color;
+		width: 20rem;
+		margin-bottom: 0rem;
+		margin-top: 70px;
+		margin-left: 6rem;
+		padding-left: 3rem;
+		height: 2rem;
+		font-size: 20px;
+	}
+	@media(min-width: 1000px){
+		background-color: $primary-color;
+		width: 20rem;
+		margin-bottom: 0rem;
+		margin-top: 70px;
+		margin-left: 10rem;
+		padding-left: 3rem;
+		height: 2rem;
+		font-size: 20px;
+	}
 }
 
 h1 a{
-	float: left;
-	width: 60px; 
-    height: 60px;
-    background: url("../images/turntable.png");
-    background-repeat: no-repeat;
-    text-indent:-9999px;
-    margin-top: 3px;
-   
+	@include mq(small){
+		float: left;
+		width: 60px; 
+    	height: 60px;
+    	background: url("../images/turntable.png");
+    	background-repeat: no-repeat;
+    	text-indent:-9999px;
+    		margin-top: 3px;
+    }
+    @include mq(medium){
+    	float: left;
+		width: 60px; 
+   		height: 60px;
+    	background: url("../images/turntable.png");
+    	background-repeat: no-repeat;
+    	text-indent:-9999px;
+    	margin-top: 3px;
+    }
+    @include mq(large){
+    	float: left;
+		width: 60px; 
+    	height: 60px;
+    	background: url("../images/turntable.png");
+    	background-repeat: no-repeat;
+    	text-indent:-9999px;
+    	margin-top: 3px;
+    }
+    @media(min-width: 1000px){
+    	float: left;
+		width: 60px; 
+    	height: 60px;
+    	background: url("../images/turntable.png");
+    	background-repeat: no-repeat;
+    	text-indent:-9999px;
+    	margin-top: 3px;
+    }
 }
 
 #searchField{
-	height: 30px;
-	width: 520px;
-	background-color: #EEEEEE;
-	margin-top: 0rem; 
-	margin-left: 20rem;
-	font-size: 20px;
-	margin-bottom: 20px;
+	@include mq(small){
+		height: 40px;
+		width: 20rem;
+		background-color: #EEEEEE;
+		margin-top: 0rem; 
+		margin-left: 2rem;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	@include mq(medium){
+		height: 40px;
+		width: 20rem;
+		background-color: #EEEEEE;
+		margin-top: 0rem; 
+		margin-left: 2rem;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	@include mq(large){
+		height: 40px;
+		width: 30rem;
+		background-color: #EEEEEE;
+		margin-top: 0rem; 
+		margin-left: 6rem;
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	@media(min-width: 1000px){
+		height: 40px;
+		width: 40rem;
+		background-color: #EEEEEE;
+		margin-top: 0rem; 
+		margin-left: 10rem;
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
 }
 
 #submitSearch{
+	@include mq(small){
 	background-image: url("../images/search.png");
 	background-repeat: no-repeat;
 	width: 20px;
@@ -79,45 +319,236 @@ h1 a{
 	background-size: 15px 15px;
 	border: none;
 	margin-left: -25px;
+	}
+	@include mq(medium){
+	background-image: url("../images/search.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 15px 15px;
+	border: none;
+	margin-left: -25px;
+	}
+	@include mq(large){
+	background-image: url("../images/search.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 15px 15px;
+	border: none;
+	margin-left: -25px;
+	}
+	@media(min-width: 1000px){
+	background-image: url("../images/search.png");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-size: 15px 15px;
+	border: none;
+	margin-left: -25px;
+	}
+}
+
+#results ul {
+ @include mq(small){
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	padding-right: 0rem;
+	padding-left: 0rem;
+	}
+	@include mq(medium){
+	display: flex;
+	flex-wrap: wrap;
+	}
+	@include mq(large){
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	}
+	@media(min-width: 1000px){
+	display: flex;
+	flex-wrap: wrap;
+	}
 }
 
 #results {
+	@include mq(small){
 	li {
+	    background-color: $primary-color;
+	    width: auto;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: flex-start;
 		text-align: center;
-		width: calc(100%/3);
-		display: inline-block;
-		float: left;
 		font-size: 10px;
+		margin-bottom: 1rem;
 		}
  	p {
 		text-align: center;
 		background-color: $primary-color;
-		font-size: 10px;
-		width: 14rem;
+		font-size: 12px;
+		width: auto;
+		margin-top: 0rem;
 		}
+		}
+	@include mq(medium){
+		li {
+		background-color: $primary-color;
+	    width: auto;
+		display: flex;
+	    justify-content: flex-start;
+	    flex-direction: column;
+		text-align: center;
+		font-size: 8px;
+		margin-bottom: 1rem;
+		}
+ 	 p{
+		text-align: center;
+		background-color: $primary-color;
+		font-size: 15px;
+		width: auto;
+		margin-top: 0rem;
+		}
+		}
+	@include mq(large){
+		li {
+		width: 30%;
+		height: 120px;
+		display: flex;
+		margin-right: 1rem;
+		justify-content: flex-start;
+		flex-direction: row;
+		flex-wrap: wrap;
+        text-align: center;
+		font-size: 10px;
+		margin-bottom: 1rem;
+		}
+ 	 p{
+		text-align: center;
+		font-size: 16px;
+		width: 100%;
+		}
+		}
+	@media(min-width: 1000px){
+		li {
+		width: 30%;
+		height: 120px;
+		display: flex;
+		margin-right: 1rem;
+		justify-content: flex-start;
+		flex-direction: row;
+		flex-wrap: wrap;
+        text-align: center;
+		font-size: 10px;
+		margin-bottom: 1rem;
+		}
+ 	 p{
+		text-align: center;
+		font-size: 16px;
+		width: 100%;
+		}
+		}
+	
 }
 
+
 results::after{
-	content: " ";
-	display: block;
-	clear: both;
+	@include mq(small){
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	@include mq(medium){
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	@include mq(large){
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	@media(min-width: 1000px){
+		content: " ";
+		display: block;
+		clear: both;
+	}
 }
+
 
 #results ul:nth-of-type(3n+1),
 #results > p:last-child{
-	clear: left;
+	@include mq(small){
+		clear: left;
+	}
+	@include mq(medium){
+		clear: left;
+	}
+	@include mq(large){
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	@media(min-width: 1000px){
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
 }
 
 #results > p{
-	font-size: 10px;
-	@include brs(1,0,1,0);
-	padding: .5em 1em;
-	background-color: $secondary-color;
-	width: 130px;
-	color: $primary-color;
-	margin: 28rem;
-	margin-bottom: 2rem;
-	margin-top: 10rem;
-	margin-left: 24rem;
+	@include mq(small){
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: 16px;
+		padding-right: 7rem;
+		text-align: center;
+		@include brs(1,1,1,1);
+    	background-color: $secondary-color;
+		width: auto;
+		color: $primary-color;
+	}
+	@include mq(medium){
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		font-size: 16px;
+		padding-right: 7rem;
+		text-align: center;
+		@include brs(1,1,1,1);
+    	background-color: $secondary-color;
+		width: auto;
+		color: $primary-color;
+	}
+	@include mq(large){
+		width: 100%;
+		margin-left: 20rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		font-size: 12px;
+		@include brs(1,0,1,0);
+		padding: .5em 1em;
+		background-color: $secondary-color;
+		width: 6rem;
+		height: 20px;
+		color: $primary-color;
+	}
+	@media(min-width: 1000px){
+		width: 100%;
+		margin-left: 30rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		font-size: 12px;
+		@include brs(1,0,1,0);
+		padding: .5em 1em;
+		background-color: $secondary-color;
+		width: 120px;
+		height: 17px;
+		color: $primary-color;
+	}
 }
 	

@@ -5,3 +5,15 @@
 	border-bottom-left-radius: $bottomLeft;
 	border-bottom-right-radius: $bottomRight;
 }
+
+@mixin mq($size){
+	@if $size == small{
+		@media (min-width: 300px){ @content; }
+}
+@else if $size == medium {
+	@media (min-width: 400px) { @content; }
+}
+@else if $size == large{
+	@media (min-width: 700px) { @content; }
+}
+}
