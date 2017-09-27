@@ -30,7 +30,7 @@
     background-color: white;
     font-family: helvetica, Arial, san-serif;
     font-size: 16px;
-    line-height: .5;
+    line-height: 0;
     color: #CCCCCC;
     height: 100%; } }
 
@@ -155,7 +155,8 @@
     color: #16A085;
     font-size: 16px;
     text-align: center;
-    background-color: #222222; } }
+    background-color: #222222;
+    margin-bottom: 0; } }
 
 @media (min-width: 300px) {
   #headlineResults {
