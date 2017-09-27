@@ -152,8 +152,7 @@ li h3{
 		color: $secondary-color;
 		font-size: 16px;
 		text-align: center;
-		background-color: $primary-color
-	}
+		}
 }
 
 h3{
@@ -376,7 +375,6 @@ h1 a{
 #results {
 	@include mq(small){
 	li {
-	    background-color: $primary-color;
 	    width: auto;
 		display: flex;
 	    flex-direction: column;
@@ -395,8 +393,7 @@ h1 a{
 		}
 	@include mq(medium){
 		li {
-		background-color: $primary-color;
-	    width: auto;
+		width: auto;
 		display: flex;
 	    justify-content: flex-start;
 	    flex-direction: column;
@@ -445,8 +442,7 @@ h1 a{
 		margin-bottom: 1rem;
 		}
  	 p{
- 	    background-color: $primary-color
-		text-align: center;
+ 	    text-align: center;
 		font-size: 16px;
 		width: 100%;
 		}
