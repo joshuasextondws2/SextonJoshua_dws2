@@ -1,5 +1,5 @@
 function loadData(){
-	if(localStorage.getItem('userData')){
+	//if(localStorage.getItem('userData')){
 		var data = JSON.parse(localStorage.getItem('userData'));
         //populate the h2
         var element= document.querySelector('#search h2');
@@ -69,7 +69,7 @@ request.onload = function(){
 		
 		//save the data
 		const stringData = JSON.stringify(data)
-		//localStorage.setItem('userData', stringData)
+		localStorage.setItem('userData', stringData)
 		
 		//do something with the data
 		var element = document.querySelectorAll('#results li');
