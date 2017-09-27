@@ -1,5 +1,5 @@
 function loadData(){
-	//if(localStorage.getItem('userData')){
+	if(localStorage.getItem('userData')){
 		var data = JSON.parse(localStorage.getItem('userData'));
         //populate the h2
         var element= document.querySelector('#search h2');
