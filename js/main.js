@@ -21,33 +21,14 @@ function loadData(){
         element.innerHTML = "Search for your favorite artist";
         //populate the h3
 		var element = document.querySelector('#results h3');
-        element.innerHTML= "Results for John Williams ";
+        element.innerHTML= "Results for";
         
-        //instantiate new object
-	var request = new XMLHttpRequest();
-	var query = "John Williams"
-
-	//build a query string with a template literal
-	var api =
-'https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist='+query+'&api_key=70858262ab8dd5ec29868a03c78bc3cf&format=json';
-
-	//open the request passing in a type
-	request.open('GET', api, true);
-
-//listen to the onload event.
-	request.onload = function(){
-	//check for success of status codes
-	if(request.status >= 200 && request.status <400){
-		//parse our data from json
-		var data = JSON.parse(request.responseText);
-        
-        
-		var element = document.querySelectorAll('#results li');
+        var element = document.querySelectorAll('#results li');
 
     	var i;
     	for (i = 0; i < element.length; i++) {
-		element[i].querySelectorAll('h3')[0].innerHTML = data.topalbums.album[i].name;
-		element[i].querySelectorAll('p')[0].innerHTML = data.topalbums.album[i].artist.name;
+		element[i].querySelectorAll('h3')[0].innerHTML = "";
+		element[i].querySelectorAll('p')[0].innerHTML = "";
 	
 	}
 }
