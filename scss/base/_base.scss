@@ -155,7 +155,7 @@ li h3{
 		}
 }
 
-h3{
+#headlineResults{
 	@include mq(small){
 		background-color: $primary-color;
 		color: $neutral-color;
@@ -185,6 +185,7 @@ h3{
 		color: $neutral-color;
 		width: 20rem;
 		margin-top: 18px;
+		margin-left: 40px;
 		font-size: 24px;
 		}
 }
@@ -385,7 +386,6 @@ h1 a{
 		}
  	p {
 		text-align: center;
-		background-color: $primary-color;
 		font-size: 12px;
 		width: auto;
 		margin-top: 0rem;
@@ -403,7 +403,6 @@ h1 a{
 		}
  	 p{
 		text-align: center;
-		background-color: $primary-color;
 		font-size: 15px;
 		width: auto;
 		margin-top: 0rem;
