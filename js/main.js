@@ -69,7 +69,7 @@ request.onload = function(){
 		
 		//save the data
 		const stringData = JSON.stringify(data)
-		localStorage.setItem('userData', stringData)
+		//localStorage.setItem('userData', stringData)
 		
 		//do something with the data
 		var element = document.querySelectorAll('#results li');
