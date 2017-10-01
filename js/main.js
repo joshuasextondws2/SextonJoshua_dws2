@@ -1,4 +1,4 @@
-function loadData(){
+//function loadData(){
 	if(localStorage.getItem('userData')){
 		var data = JSON.parse(localStorage.getItem('userData'));
         //populate the h2
@@ -7,6 +7,21 @@ function loadData(){
         //populate the h3
 		var element = document.querySelector('#results h3');
         element.innerHTML= "Results for  "+data.topalbums.album[0].artist.name;
+        
+        //creating list elements for results
+        var i;
+        for (i = 0; i < 9; i++) {
+        var newLi = document.createElement('Li');
+        var newImage = document.createElement('img');
+        var newH3 = document.createElement('h3');
+        var newP = document.createElement('p');
+        var resultsList = document.getElementById('resultsList');
+        resultsList.appendChild(newLi);
+        newLi.appendChild(newImage);
+        newLi.appendChild(newH3);
+        newLi.appendChild(newP);
+        }
+        
 		var element = document.querySelectorAll('#results li');
 		 //loop over the results
        	var i;
@@ -22,19 +37,11 @@ function loadData(){
         //populate the h3
 		var element = document.querySelector('#results h3');
         element.innerHTML= "Results for";
-        
-        var element = document.querySelectorAll('#results li');
+        }
+//}
 
-    	var i;
-    	for (i = 0; i < element.length; i++) {
-		element[i].querySelectorAll('h3')[0].innerHTML = "";
-		element[i].querySelectorAll('p')[0].innerHTML = "";
-	
-	}
-}
 
-}
-window.addEventListener('load', loadData, false);
+//window.addEventListener('load', loadData, false);
 
 
 
@@ -71,7 +78,21 @@ request.onload = function(){
 		//save the data
 		const stringData = JSON.stringify(data)
 		localStorage.setItem('userData', stringData)
+		var dataSize = data.length;
 		
+		 //creating list elements for results
+        var i;
+        for (i = 0; i < dataSize; i++) {
+        var newLi = document.createElement('Li');
+        var newImage = document.createElement('img');
+        var newH3 = document.createElement('h3');
+        var newP = document.createElement('p');
+        var resultsList = document.getElementById('resultsList');
+        resultsList.appendChild(newLi);
+        newLi.appendChild(newImage);
+        newLi.appendChild(newH3);
+        newLi.appendChild(newP);
+        }
 		//do something with the data
 		var element = document.querySelectorAll('#results li');
 		
@@ -79,8 +100,9 @@ request.onload = function(){
         //loop over the results
         if(element){
         	var i;
-        	for (i=0; i < element.length; i++){
-		   	 	element[i].querySelectorAll('h3')[0].innerHTML= data.topalbums.album[i].name;
+        	for (i=0; i < 9; i++){
+        		element[i].querySelectorAll('img')[0].src = data.topalbums.album[i].image[2]['#text'];
+        		element[i].querySelectorAll('h3')[0].innerHTML= data.topalbums.album[i].name;
 				element[i].querySelectorAll('p')[0].innerHTML= data.topalbums.album[i].artist.name;
            }
         }

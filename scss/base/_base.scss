@@ -28,7 +28,7 @@ html{
 	@media(min-width: 1000px){
 		background-color: $neutral-color;
 		font-family: $font-stack;
-		font-size: 16px;
+		font-size: 12px;
 		line-height: 1.5;
 		color: $copy-color;
 		height:100%;
@@ -56,7 +56,7 @@ body{
 	@media(min-width: 1000px){
 		background-image: url("../images/austin-neill-213462.jpg");
 		background-repeat: no-repeat;
-		background-size: 100% 30%;
+		background-size: 100% 20%;
 		height: auto;
 	}
 }
@@ -124,10 +124,11 @@ search{
 		margin: 0 auto;
 	}
 	@media(min-width: 1000px){
-		width: auto;
+		width: 70%;
 		max-width: 1100px;
 		margin: 0 auto;
-	}
+		margin-right: 15rem;
+		}
 }
 
 li h3{
@@ -150,9 +151,8 @@ li h3{
 	@media(min-width: 1000px){
 		width: 100%;
 		color: $secondary-color;
-		font-size: 16px;
+		font-size: 12px;
 		text-align: center;
-		background-color: $primary-color;
 		margin-bottom: 0;
 		}
 }
@@ -186,9 +186,10 @@ li h3{
 		background-color: $primary-color;
 		color: $neutral-color;
 		width: 20rem;
-		margin-top: 18px;
-		margin-left: 40px;
-		font-size: 24px;
+		margin-top: 30px;
+		margin-left: 120px;
+		font-size: 18px;
+		padding-left: 0;
 		}
 }
 
@@ -225,13 +226,13 @@ h2{
 	}
 	@media(min-width: 1000px){
 		background-color: $primary-color;
-		width: 20rem;
+		width: 15rem;
 		margin-bottom: 0rem;
-		margin-top: 70px;
-		margin-left: 10rem;
-		padding-left: 3rem;
+		margin-top: 20px;
+		margin-left: 20rem;
+		padding-left: 0;
 		height: 2rem;
-		font-size: 20px;
+		font-size: 12px;
 	}
 }
 
@@ -305,11 +306,11 @@ h1 a{
 	@media(min-width: 1000px){
 		height: 40px;
 		width: 40rem;
-		background-color: #EEEEEE;
+		background-color: #C0C0C0 ;
 		margin-top: 0rem; 
-		margin-left: 10rem;
+		margin-left: 20rem;
 		font-size: 25px;
-		margin-bottom: 20px;
+		margin-bottom: 70px;
 	}
 }
 
@@ -346,9 +347,9 @@ h1 a{
 	background-repeat: no-repeat;
 	width: 20px;
 	height: 20px;
-	background-size: 15px 15px;
+	background-size: 20px 20px;
 	border: none;
-	margin-left: -25px;
+	margin-left: -28px;
 	}
 }
 
@@ -378,6 +379,7 @@ h1 a{
 #results {
 	@include mq(small){
 	li {
+		background-color: $primary-color;
 	    width: auto;
 		display: flex;
 	    flex-direction: column;
@@ -395,6 +397,7 @@ h1 a{
 		}
 	@include mq(medium){
 		li {
+		background-color: $primary-color;
 		width: auto;
 		display: flex;
 	    justify-content: flex-start;
@@ -412,6 +415,7 @@ h1 a{
 		}
 	@include mq(large){
 		li {
+		background-color: $primary-color;
 		width: 30%;
 		height: 120px;
 		display: flex;
@@ -431,8 +435,9 @@ h1 a{
 		}
 	@media(min-width: 1000px){
 		li {
-		width: 30%;
-		height: 120px;
+		background-color: $primary-color;
+		width: 175px;
+		height: 280px;
 		display: flex;
 		margin-right: 1rem;
 		justify-content: flex-start;
@@ -446,7 +451,6 @@ h1 a{
  	    text-align: center;
 		font-size: 16px;
 		width: 100%;
-		background-color: $primary-color;
 		padding-top: 0;
 		margin-top: 2px;
 		}
@@ -540,7 +544,7 @@ results::after{
 	}
 	@media(min-width: 1000px){
 		width: 100%;
-		margin-left: 30rem;
+		margin-left: 27rem;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;

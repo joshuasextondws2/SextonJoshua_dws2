@@ -24,7 +24,7 @@ nav ul{
 	 	display: flex;
 	 	justify-content:flex-end;
 	 	font: 6px;
-	 	margin-top: 2px;
+	 	margin-top: 0;
 	 }
 }
 
@@ -75,12 +75,14 @@ nav li{
 		color: $copy-color;
 		font: 10px;
 		text-decoration: none;
+		margin-top: 8px;
 	
 	a{
 		display: flex;
 		color: $copy-color;
 		font-size: 10px;
 		text-decoration: none;
+		margin-top: 8px;
 		}
 }
 }
