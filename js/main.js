@@ -1,4 +1,5 @@
-//function loadData(){
+var data = null;
+function loadData(){
 	if(localStorage.getItem('userData')){
 		var data = JSON.parse(localStorage.getItem('userData'));
         //populate the h2
@@ -26,6 +27,7 @@
 		 //loop over the results
        	var i;
         	for (i=0; i < element.length; i++){
+        	    element[i].querySelectorAll('img')[0].src = data.topalbums.album[i].image[2]['#text'];
 		   	 	element[i].querySelectorAll('h3')[0].innerHTML= data.topalbums.album[i].name;
 				element[i].querySelectorAll('p')[0].innerHTML= data.topalbums.album[i].artist.name;
            }
@@ -38,10 +40,10 @@
 		var element = document.querySelector('#results h3');
         element.innerHTML= "Results for";
         }
-//}
+}
 
 
-//window.addEventListener('load', loadData, false);
+window.addEventListener('load', loadData, false);
 
 
 
@@ -76,40 +78,37 @@ request.onload = function(){
 		var data = JSON.parse(request.responseText);
 		
 		//save the data
-		const stringData = JSON.stringify(data)
-		localStorage.setItem('userData', stringData)
-		var dataSize = data.length;
+		//const stringData = JSON.stringify(data)
+		//localStorage.setItem('userData', stringData)
+		//var dataSize = stringData.length;
 		
+
 		 //creating list elements for results
-        var i;
-        for (i = 0; i < dataSize; i++) {
-        var newLi = document.createElement('Li');
-        var newImage = document.createElement('img');
-        var newH3 = document.createElement('h3');
-        var newP = document.createElement('p');
-        var resultsList = document.getElementById('resultsList');
-        resultsList.appendChild(newLi);
-        newLi.appendChild(newImage);
-        newLi.appendChild(newH3);
-        newLi.appendChild(newP);
-        }
-		//do something with the data
-		var element = document.querySelectorAll('#results li');
-		
-		
-        //loop over the results
-        if(element){
-        	var i;
-        	for (i=0; i < 9; i++){
-        		element[i].querySelectorAll('img')[0].src = data.topalbums.album[i].image[2]['#text'];
-        		element[i].querySelectorAll('h3')[0].innerHTML= data.topalbums.album[i].name;
-				element[i].querySelectorAll('p')[0].innerHTML= data.topalbums.album[i].artist.name;
-           }
-        }
-		} else {
+		 if(data){
+		var i;
+        for (i = 0; i < 9; i++) {
+			var newLi = document.createElement('Li');
+        	var newImage = document.createElement('img');
+        	newImage.src = data.topalbums.album[i].image[2]['#text'];
+        	var newH3 = document.createElement('h3');
+        	var t = document.createTextNode(data.topalbums.album[i].name);
+        	newH3.appendChild(t);
+        	var newP = document.createElement('p');
+        	var p =  document.createTextNode(data.topalbums.album[i].artist.name);
+        	newP.appendChild(p);
+        	var resultsList = document.getElementById('resultsList');
+        	resultsList.appendChild(newLi);
+        		newLi.appendChild(newImage);
+        		newLi.appendChild(newH3);
+        		newLi.appendChild(newP);
+        		 }
+        		 }
+        
+        
+      	} else {
 		// code for Response Errors
 			console.log('response error', request)
-		  }
+	  }
 }
 
 //listen for connection errors
