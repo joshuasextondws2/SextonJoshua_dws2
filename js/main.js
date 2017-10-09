@@ -11,15 +11,15 @@ function loadData(){
         //creating list elements for results
         var i;
         for (i = 0; i < 9; i++) {
-        var newLi = document.createElement('Li');
-        var newImage = document.createElement('img');
-        var newH3 = document.createElement('h3');
-        var newP = document.createElement('p');
-        var resultsList = document.getElementById('resultsList');
-        resultsList.appendChild(newLi);
-        newLi.appendChild(newImage);
-        newLi.appendChild(newH3);
-        newLi.appendChild(newP);
+        	var newLi = document.createElement('Li');
+        	var newImage = document.createElement('img');
+        	var newH3 = document.createElement('h3');
+        	var newP = document.createElement('p');
+        	var resultsList = document.getElementById('resultsList');
+        	resultsList.appendChild(newLi);
+        	newLi.appendChild(newImage);
+        	newLi.appendChild(newH3);
+        	newLi.appendChild(newP);
         }
         
 		var element = document.querySelectorAll('#results li');
@@ -88,7 +88,7 @@ request.onload = function(){
 		}	
 
 		 //creating list elements for results
-		 if(data){
+		if(data){
 		 	var node = document.getElementById('resultsList');
 			while (node.hasChildNodes()) {
     			node.removeChild(node.firstChild);
@@ -96,17 +96,17 @@ request.onload = function(){
 		 
 			var i;
         	for (i = 0; i < 9; i++) {
-        	var newLi = document.createElement('Li');
-        	var newImage = document.createElement('img');
-        	newImage.src = data.topalbums.album[i].image[2]['#text'];
-        	var newH3 = document.createElement('h3');
-        	var t = document.createTextNode(data.topalbums.album[i].name);
-        	newH3.appendChild(t);
-        	var newP = document.createElement('p');
-        	var p =  document.createTextNode(data.topalbums.album[i].artist.name);
-        	newP.appendChild(p);
-        	var resultsList = document.getElementById('resultsList');
-        	resultsList.appendChild(newLi);
+        		var newLi = document.createElement('Li');
+        		var newImage = document.createElement('img');
+        		newImage.src = data.topalbums.album[i].image[2]['#text'];
+        		var newH3 = document.createElement('h3');
+        		var t = document.createTextNode(data.topalbums.album[i].name);
+        		newH3.appendChild(t);
+        		var newP = document.createElement('p');
+        		var p =  document.createTextNode(data.topalbums.album[i].artist.name);
+        		newP.appendChild(p);
+        		var resultsList = document.getElementById('resultsList');
+        		resultsList.appendChild(newLi);
         		newLi.appendChild(newImage);
         		newLi.appendChild(newH3);
         		newLi.appendChild(newP);
