@@ -77,10 +77,15 @@ request.onload = function(){
 		var data = JSON.parse(request.responseText);
 		
 		//save the data
-		//const stringData = JSON.stringify(data)
-		//localStorage.setItem('userData', stringData)
-		//var dataSize = stringData.length;
+		const stringData = JSON.stringify(data)
+		localStorage.setItem('userData', stringData)
 		
+		var dataSize= stringData.length;
+		alert(query);
+	if(query==""){
+			var element = document.querySelector('#results h3');
+       		 element.innerHTML= "search results: 0";
+		}	
 
 		 //creating list elements for results
 		 if(data){

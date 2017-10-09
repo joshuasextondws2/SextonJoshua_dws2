@@ -165,6 +165,7 @@
 @media (min-width: 1000px) {
   li h3 {
     width: 100%;
+    position: static;
     color: #16A085;
     font-size: 12px;
     text-align: center;
@@ -204,11 +205,12 @@
   #headlineResults {
     background-color: #222222;
     color: white;
-    width: 20rem;
+    width: 22rem;
     margin-top: 30px;
-    margin-left: 120px;
-    font-size: 18px;
-    padding-left: 0; } }
+    margin-left: 75px;
+    font-size: 15px;
+    padding-left: 0;
+    height: 3rem; } }
 
 @media (min-width: 300px) {
   h2 {
@@ -241,7 +243,7 @@
     margin-bottom: 0rem;
     margin-top: 70px;
     margin-left: 6rem;
-    padding-left: 3rem;
+    padding-left: 0rem;
     height: 2rem;
     font-size: 20px; } }
 
@@ -501,7 +503,8 @@
     text-align: center;
     font-size: 10px;
     margin-bottom: 1rem; }
-  #results p {
+  #results li p {
+    position: static;
     text-align: center;
     font-size: 16px;
     width: 100%;
@@ -597,7 +600,6 @@
 @media (min-width: 700px) {
   #loadMoreMusic {
     width: 100%;
-    margin-left: 20rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -606,16 +608,16 @@
     border-top-right-radius: 0;
     border-bottom-left-radius: 1;
     border-bottom-right-radius: 0;
-    padding: .5em 1em;
+    padding-right: 15px;
     background-color: #16A085;
-    width: 6rem;
-    height: 20px;
+    width: 150px;
+    height: 25px;
     color: #222222; } }
 
 @media (min-width: 1000px) {
   #loadMoreMusic {
     width: 100%;
-    margin-left: 27rem;
+    margin-left: 23rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;

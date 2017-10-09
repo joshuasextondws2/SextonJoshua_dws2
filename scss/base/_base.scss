@@ -163,6 +163,7 @@ li h3{
 	}
 	@media(min-width: 1000px){
 		width: 100%;
+		position: static;
 		color: $secondary-color;
 		font-size: 12px;
 		text-align: center;
@@ -201,11 +202,13 @@ li h3{
 	@media(min-width: 1000px){
 		background-color: $primary-color;
 		color: $neutral-color;
-		width: 20rem;
+		width: 22rem;
 		margin-top: 30px;
-		margin-left: 120px;
-		font-size: 18px;
+		margin-left: 75px;
+		font-size: 15px;
 		padding-left: 0;
+		height: 3rem;
+		
 		}
 }
 
@@ -238,7 +241,7 @@ h2{
 		margin-bottom: 0rem;
 		margin-top: 70px;
 		margin-left: 6rem;
-		padding-left: 3rem;
+		padding-left: 0rem;
 		height: 2rem;
 		font-size: 20px;
 	}
@@ -510,7 +513,8 @@ li img {
 		font-size: 10px;
 		margin-bottom: 1rem;
 		}
- 	 p{
+ 	li p{
+ 		position: static;
  	    text-align: center;
 		font-size: 16px;
 		width: 100%;
@@ -598,22 +602,21 @@ results::after{
 		margin-left: auto;
 	}
 	@include mq(large){
-		width: 100%;
-		margin-left: 20rem;
+		width:100%;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
 		font-size: 12px;
 		@include brs(1,0,1,0);
-		padding: .5em 1em;
+		padding-right: 15px;
 		background-color: $secondary-color;
-		width: 6rem;
-		height: 20px;
+		width: 150px;
+		height: 25px;
 		color: $primary-color;
 	}
 	@media(min-width: 1000px){
 		width: 100%;
-		margin-left: 27rem;
+		margin-left: 23rem;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
