@@ -81,7 +81,7 @@ request.onload = function(){
 		localStorage.setItem('userData', stringData)
 		
 		var dataSize= stringData.length;
-		alert(query);
+		
 	if(query==""){
 			var element = document.querySelector('#results h3');
        		 element.innerHTML= "search results: 0";
