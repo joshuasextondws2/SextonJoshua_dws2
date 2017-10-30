@@ -59,7 +59,7 @@ h2{
 	width: 15rem;
 	margin-bottom: 0;
 	margin-top: 20px;
-	margin-left: 25rem;
+	margin-left: 28rem;
 	padding-left: 0;
 	height: 2rem;
 	font-size: 12px;
@@ -80,7 +80,7 @@ h1 a{
 	width: 40rem;
 	background-color: #C0C0C0 ;
 	margin-top: 0; 
-	margin-left: 25rem;
+	margin-left: 28rem;
 	font-size: 25px;
 	margin-bottom: 70px;
 }
@@ -98,8 +98,7 @@ h1 a{
 
 
 #results ul {
-	margin-right: auto;
-	margin-left: auto;
+	@extend %center-element;
 	display: flex;
 	flex-wrap: wrap;
 	padding-left: 0;
@@ -132,12 +131,6 @@ li img {
 		padding-top: 0;
 		margin-top: 2px;
 		}
-}
-
-results::after{
-	content: " ";
-	display: block;
-	clear: both;
 }
 
 #results ul:nth-of-type(3n+1),
