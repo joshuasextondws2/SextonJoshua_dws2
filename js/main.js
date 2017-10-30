@@ -88,7 +88,7 @@ request.onload = function(){
 		}	
 
 		 //creating list elements for results
-		if(data){
+		if(data !== null){
 		 	var node = document.getElementById('resultsList');
 			while (node.hasChildNodes()) {
     			node.removeChild(node.firstChild);

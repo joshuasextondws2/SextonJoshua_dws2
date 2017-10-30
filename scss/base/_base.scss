@@ -31,8 +31,7 @@ search{
 #results{
 	width: 50%;
 	max-width: 1100px;
-	margin-left: auto;
-	margin-right: auto;
+	@extend %center-element;
 }
 
 li h3{
@@ -149,8 +148,7 @@ results::after{
 }
 
 #loadMoreMusic{
-	margin-left: auto;
-	margin-right: auto;
+	@extend %center-element;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
