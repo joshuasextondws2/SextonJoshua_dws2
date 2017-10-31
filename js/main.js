@@ -116,6 +116,7 @@ request.onload = function(){
         
       	} else {
 		// code for Response Errors
+			
 			console.log('response error', request)
 	  }
 }
